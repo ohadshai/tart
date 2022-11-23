@@ -1,14 +1,7 @@
 IPython
-requests
 coloredlogs
 verboselogs
 click
 click-help-colors
-scp
-paramiko>=2.6.0
-wheel
-configparser
-retry
-pymobiledevice3
 colored
-multi_key_dict>=2.0.3
+configparser

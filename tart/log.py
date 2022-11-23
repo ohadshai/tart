@@ -23,11 +23,12 @@ def disable_other_loggers():
     logging.getLogger('asyncio').disabled = True
 
 
-def configure_logger(name='Tart', level=None):
-    from tart.config.config import get_config
-    config = get_config()
-    level = logging._nameToLevel[level and level.upper or config.log.level.upper()]
-    disable_other_loggers()
+def configure_logger(name='Tart', level='debug'):
+    # from tart.config.config import get_config
+    # config = get_config()
+    # level = logging._nameToLevel[level and level.upper or config.log.level.upper()]
+    level = logging._nameToLevel[level and level.upper()]
+    # disable_other_loggers()
     _replace_log_level()
 
     verboselogs.install()

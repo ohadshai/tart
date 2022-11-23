@@ -22,7 +22,7 @@ class TartConfig(metaclass=Singelton):
     def __init__(self, path=CONFIG_PATH):
         self.parser = ConfigParser(interpolation=ExtendedInterpolation())
         self.path = path
-        self.load()
+        # self.load()
 
     def load(self):
         if not os.path.exists(CONFIG_PATH):
